@@ -1,0 +1,21 @@
+For Assignment 1...
+I want to build...
+
+An employee car salesman/customer application that
+keeps track of Employees, Customers and their transactions.
+
+Employee
+a. id
+b. firstName
+c. lastName
+d. unitsSold
+
+Customer
+e. id
+f. firstName
+g. lastName
+h. purchasePrice
+
+2 use cases:
+a. print report of all sales by employee
+b. calculate loyalty points earned by customer
