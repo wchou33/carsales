@@ -8,7 +8,7 @@ Employee
 a. id
 b. firstName
 c. lastName
-d. unitsSold
+d. carsSold
 
 Customer
 e. id
