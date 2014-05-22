@@ -13,11 +13,11 @@ public class TestDriver {
 		ArrayList<Employee> employees = EmployeeUtil.createEmployees();
 		EmployeeUtil.printEmployees(employees);
 		System.out.println("------------------");
-		ArrayList<Employee> employeesByLastName = EmployeeUtil.searchEmployeesByLastName(employees, "PUBLISHING");
+		ArrayList<Employee> employeesByLastName = EmployeeUtil.searchEmployeesByLastName(employees, "txet");
 		EmployeeUtil.printEmployees(employeesByLastName);
 		
 		System.out.println("------------------");
-		ArrayList<Employee> employeesByLastNameRegex = EmployeeUtil.searchEmployeesByLastNameRegex(employees, "WO.*");
+		ArrayList<Employee> employeesByLastNameRegex = EmployeeUtil.searchEmployeesByLastNameRegex(employees, "ti.*");
 		EmployeeUtil.printEmployees(employeesByLastNameRegex);
 
 	}
