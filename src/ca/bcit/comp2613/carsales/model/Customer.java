@@ -1,17 +1,19 @@
 package ca.bcit.comp2613.carsales.model;
 
-public class Customer {
+public enum Customer {
+	VAN, GREATERVAN, OUTSIDE;
+	
 	private String id;
 	private String firstName;
 	private String lastName;
 	private Integer purchasePrice;
 
-	public Customer() {
+	Customer() {
 	}
 
-	public Customer(String id, String firstName, String lastName,
+	Customer(String id, String firstName, String lastName,
 			Integer purchasePrice) {
-		super();
+		//super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
