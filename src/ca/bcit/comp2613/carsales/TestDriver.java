@@ -19,6 +19,8 @@ public class TestDriver {
 		System.out.println("------------------");
 		ArrayList<Employee> employeesByLastNameRegex = EmployeeUtil.searchEmployeesByLastNameRegex(employees, "ti.*");
 		EmployeeUtil.printEmployees(employeesByLastNameRegex);
+		
+		System.out.println("testing again");
 
 	}
 
