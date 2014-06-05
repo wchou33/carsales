@@ -1,11 +1,14 @@
 package ca.bcit.comp2613.carsales.model;
 
 public class Employee {
+
 	private String id;
 	private String firstName;
 	private String lastName;
 	private Integer carsSold;
-
+	private Customer customer;
+	
+	
 	public Employee() {
 	}
 
@@ -48,6 +51,14 @@ public class Employee {
 
 	public void setCarsSold(Integer carsSold) {
 		this.carsSold = carsSold;
+	}
+	
+	public Customer getCustomer() {
+		return customer;
+	}
+	
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 
 	@Override

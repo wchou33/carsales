@@ -1,7 +1,7 @@
 package ca.bcit.comp2613.carsales.model;
 
 public enum Customer {
-	VAN, GREATERVAN, OUTSIDE;
+	VAN, OUTSIDEVAN;
 	
 	private String id;
 	private String firstName;

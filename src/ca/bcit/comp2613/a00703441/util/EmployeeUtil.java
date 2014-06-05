@@ -2,7 +2,12 @@ package ca.bcit.comp2613.a00703441.util;
 
 import java.util.ArrayList;
 
+import ca.bcit.comp2613.carsales.model.Customer;
 import ca.bcit.comp2613.carsales.model.Employee;
+
+
+import java.util.Random;
+import java.util.UUID;
 
 public class EmployeeUtil {
 
@@ -20,12 +25,18 @@ public class EmployeeUtil {
 		ArrayList<Employee> retval = new ArrayList<>();
 		String[] strs = LOREM_IPSUM.split("\\s");
 
-		for (int i = 0; i < strs.length; i++) {
+		for (int i = 0; i < 100; i++) {
 			Employee employee = new Employee();
 			employee.setId(Integer.toString(i));
 			employee.setFirstName(strs[i].toUpperCase());
 			employee.setLastName(new StringBuilder(strs[i]).reverse()
 					.toString());
+			if(i > 50) {
+				employee.setCustomer(Customer.OUTSIDEVAN);
+			}
+			else {
+			employee.setCustomer(Customer.VAN);
+			}
 			retval.add(employee);
 		}
 		return retval;

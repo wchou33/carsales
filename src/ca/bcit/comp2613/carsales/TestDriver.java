@@ -6,6 +6,9 @@ import java.util.Arrays;
 import ca.bcit.comp2613.carsales.model.Employee;
 import ca.bcit.comp2613.a00703441.util.EmployeeUtil;
 
+import ca.bcit.comp2613.carsales.model.Customer;
+import ca.bcit.comp2613.a00703441.util.CustomerUtil;
+
 public class TestDriver {
 
 	public static void main(String[] args) {
@@ -20,7 +23,10 @@ public class TestDriver {
 		ArrayList<Employee> employeesByLastNameRegex = EmployeeUtil.searchEmployeesByLastNameRegex(employees, "ti.*");
 		EmployeeUtil.printEmployees(employeesByLastNameRegex);
 		
-		System.out.println("testing again");
+		System.out.println("testing");
+		
+		System.out.println(Customer.VAN);
+		System.out.println(Customer.OUTSIDEVAN);
 
 	}
 
