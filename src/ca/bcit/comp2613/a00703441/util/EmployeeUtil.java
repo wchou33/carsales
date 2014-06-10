@@ -11,15 +11,16 @@ import java.util.UUID;
 
 public class EmployeeUtil {
 
-	public static String LOREM_IPSUM = "In publishing and graphic design, lorem ipsum is a placeholder text commonly used to "
-			+ "demonstrate the graphic elements of a document or visual presentation. By replacing the distraction of meaningful "
-			+ "content with filler text of scrambled Latin it allows viewers to focus on graphical elements such as font, typography, and layout"
-			+ "The lorem ipsum text is typically a mangled section of De finibus bonorum et malorum, a 1st-century BC Latin text by Cicero, with words "
-			+ "altered, added, and removed that make it nonsensical, improper Latin"
-			+ "A variation of the common lorem ipsum text has been used during typesetting since the 1960s or "
-			+ "earlier, when it was popularized by advertisements for Letraset transfer sheets. It was introduced "
-			+ "to the Digital Age by Aldus Corporation in the mid-1980s, which employed it in graphics and word processing templates "
-			+ "for its breakthrough desktop publishing program, PageMaker for the Apple Macintosh";
+	public static String LOREM_IPSUM = "John Bruce Joe Matt Kim Bob Mary Kit David"
+			+ "Devin Cheryl Sherry Anita Leslie Anne Ann Raj Adam Ada Carol Sam"
+			+ "Deb May April Dan Brian Cam Al Fred JJ Karl Carl Mag Vinny Mike"
+			+ "Aman Tracy Laura James Jim Jamie Jo Pat Patty Max Marv Lenny Denny"
+			+ "Ross Rose Kate Kelly Nelly Judy Bryan Brad Bret Brett Tim Ben Eva"
+			+ "Steve AJ BJ Ed Ted Lauren Laura Paul Paula Conan Jay Jimmy Craig"
+			+ "Greg Maggie Zoe Joey Zoey Eve Dick Rick Hugh Liz Lisa Elisa Eliza"
+			+ "Norm Nick Nicky Ricky Lizzy Ali Moe Mo Wayne Wes Wendy Walter Mack"
+			+ "Jack Jacky Ellen Keith Julia Julie Lily Lila Ray Robby Robbie Jackie"
+			+ "Xavier Halle Pete Peter Hilda Hilde Tom Tommy Ralph Tiger Jean Marc";
 
 	public static ArrayList<Employee> createEmployees() {
 		ArrayList<Employee> retval = new ArrayList<>();
@@ -31,12 +32,6 @@ public class EmployeeUtil {
 			employee.setFirstName(strs[i].toUpperCase());
 			employee.setLastName(new StringBuilder(strs[i]).reverse()
 					.toString());
-			if(i > 50) {
-				employee.setCustomer(Customer.OUTSIDEVAN);
-			}
-			else {
-			employee.setCustomer(Customer.VAN);
-			}
 			retval.add(employee);
 		}
 		return retval;
@@ -48,21 +43,21 @@ public class EmployeeUtil {
 		}
 	}
 
-	public static ArrayList<Employee> searchEmployeesByLastName(
-			ArrayList<Employee> employees, String lastName) {
+	public static ArrayList<Employee> searchEmployeesByFirstName(
+			ArrayList<Employee> employees, String firstName) {
 		ArrayList<Employee> retval = new ArrayList<>();
 		for (Employee employee : employees) {
-			if (employee.getLastName().equals(lastName)) {
+			if (employee.getFirstName().equals(firstName)) {
 				retval.add(employee);
 			}
 		}
 		return retval;
 	}
 	
-	public static ArrayList<Employee> searchEmployeesByLastNameRegex(ArrayList<Employee> employees, String regex) {
+	public static ArrayList<Employee> searchEmployeesByFirstNameRegex(ArrayList<Employee> employees, String regex) {
 		ArrayList<Employee> retval = new ArrayList<>();
 		for (Employee employee : employees) {
-			if (employee.getLastName().matches(regex)) {
+			if (employee.getFirstName().matches(regex)) {
 				System.out.println(employee);
 			}
 		}

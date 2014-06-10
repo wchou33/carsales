@@ -16,17 +16,17 @@ public class TestDriver {
 		ArrayList<Employee> employees = EmployeeUtil.createEmployees();
 		EmployeeUtil.printEmployees(employees);
 		System.out.println("------------------");
-		ArrayList<Employee> employeesByLastName = EmployeeUtil.searchEmployeesByLastName(employees, "txet");
-		EmployeeUtil.printEmployees(employeesByLastName);
+		ArrayList<Employee> employeesByFirstName = EmployeeUtil.searchEmployeesByFirstName(employees, "ED");
+		EmployeeUtil.printEmployees(employeesByFirstName);
 		
 		System.out.println("------------------");
-		ArrayList<Employee> employeesByLastNameRegex = EmployeeUtil.searchEmployeesByLastNameRegex(employees, "ti.*");
-		EmployeeUtil.printEmployees(employeesByLastNameRegex);
+		ArrayList<Employee> employeesByFirstNameRegex = EmployeeUtil.searchEmployeesByFirstNameRegex(employees, "JU.*");
+		EmployeeUtil.printEmployees(employeesByFirstNameRegex);
 		
 		System.out.println("testing");
 		
-		System.out.println(Customer.VAN);
-		System.out.println(Customer.OUTSIDEVAN);
+		//System.out.println(Customer.VAN);
+		//System.out.println(Customer.OUTSIDEVAN);
 
 	}
 

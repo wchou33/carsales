@@ -5,6 +5,8 @@ public class Employee {
 	private String id;
 	private String firstName;
 	private String lastName;
+	private Gender gender;
+	private Location location;
 	private Integer carsSold;
 	private Customer customer;
 	
@@ -12,12 +14,14 @@ public class Employee {
 	public Employee() {
 	}
 
-	public Employee(String id, String firstName, String lastName,
-			Integer carsSold) {
+	public Employee(String id, String firstName, String lastName, Gender gender,
+			Location location, Integer carsSold) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.gender = gender;
+		this.location = location;
 		this.carsSold = carsSold;
 	}
 
@@ -53,6 +57,22 @@ public class Employee {
 		this.carsSold = carsSold;
 	}
 	
+	public Gender getGender() {
+		return gender;
+	}
+	
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+	
+	public Location getLocation() {
+		return location;
+	}
+	
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+	
 	public Customer getCustomer() {
 		return customer;
 	}
@@ -63,8 +83,8 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "id = " + id + ", firstName = " + firstName + ", lastName = "
-				+ lastName + ", carsSold = " + carsSold;
+		return "id = " + id + ", firstName = " + firstName + ", lastName = " + lastName 
+				+ ", location = " + location + " gender = " + gender + ", carsSold = " + carsSold;
 	}
 
 }
