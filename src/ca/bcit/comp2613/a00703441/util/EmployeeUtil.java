@@ -2,8 +2,10 @@ package ca.bcit.comp2613.a00703441.util;
 
 import java.util.ArrayList;
 
-import ca.bcit.comp2613.carsales.model.Customer;
+import ca.bcit.comp2613.carsales.model.Gender;
+import ca.bcit.comp2613.carsales.model.Location;
 import ca.bcit.comp2613.carsales.model.Employee;
+
 
 
 import java.util.Random;
@@ -25,13 +27,16 @@ public class EmployeeUtil {
 	public static ArrayList<Employee> createEmployees() {
 		ArrayList<Employee> retval = new ArrayList<>();
 		String[] strs = LOREM_IPSUM.split("\\s");
+		Random random = new Random();
 
+		// create loop with random
 		for (int i = 0; i < 100; i++) {
 			Employee employee = new Employee();
 			employee.setId(Integer.toString(i));
 			employee.setFirstName(strs[i].toUpperCase());
-			employee.setLastName(new StringBuilder(strs[i]).reverse()
-					.toString());
+			employee.setLastName(new StringBuilder(strs[i]).reverse().toString());
+			employee.setGender(Gender.values()[random.nextInt(Gender.values().length)]);
+			employee.setLocation(Location.values()[random.nextInt(Location.values().length)]);
 			retval.add(employee);
 		}
 		return retval;

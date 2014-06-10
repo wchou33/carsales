@@ -1,13 +1,12 @@
 package ca.bcit.comp2613.carsales;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Random;
 
-import ca.bcit.comp2613.carsales.model.Employee;
-import ca.bcit.comp2613.a00703441.util.EmployeeUtil;
+import ca.bcit.comp2613.carsales.model.*;
+import ca.bcit.comp2613.a00703441.util.*;
 
-import ca.bcit.comp2613.carsales.model.Customer;
-import ca.bcit.comp2613.a00703441.util.CustomerUtil;
+//import ca.bcit.comp2613.carsales.model.Customer;
 
 public class TestDriver {
 
